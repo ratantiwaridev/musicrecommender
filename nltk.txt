@@ -1,0 +1,83 @@
+Natural Language Toolkit- python library for text processing and Natural Language Processsing.
+Uses- tokenization ,stemming, lemmatization, stopwards removal, text classification, etc.
+
+<------------1. Tokenization (splitting text into words or sentences)------------>
+
+python
+Copy
+Edit
+import nltk
+nltk.download('punkt')  # Download tokenizers
+
+from nltk.tokenize import word_tokenize
+
+text = "Hello there! How are you?"
+tokens = word_tokenize(text)
+print(tokens)
+# Output: ['Hello', 'there', '!', 'How', 'are', 'you', '?']
+
+<------2. Stopwords Removal (removing common useless words like "is", "the", "a")--------->
+
+python
+Copy
+Edit
+from nltk.corpus import stopwords
+nltk.download('stopwords')
+
+stop_words = set(stopwords.words('english'))
+words = ["this", "is", "an", "example", "showing", "off", "stop", "words", "filtration"]
+
+filtered_words = [word for word in words if word.lower() not in stop_words]
+print(filtered_words)
+# Output: ['example', 'showing', 'stop', 'words', 'filtration']
+
+<------3. Stemming (reducing words to their root form)------->
+
+python
+Copy
+Edit
+from nltk.stem import PorterStemmer
+
+stemmer = PorterStemmer()
+words = ["running", "ran", "runs", "easily", "fairly"]
+
+stemmed_words = [stemmer.stem(word) for word in words]
+print(stemmed_words)
+# Output: ['run', 'ran', 'run', 'easili', 'fairli']
+
+<-------------4. Lemmatization (more accurate "root" word finding)------------->
+
+python
+Copy
+Edit
+from nltk.stem import WordNetLemmatizer
+nltk.download('wordnet')
+
+lemmatizer = WordNetLemmatizer()
+print(lemmatizer.lemmatize("running", pos="v"))  # Specify pos='v' for verb
+# Output: 'run'
+nltk.download() is used because NLTK doesn't ship all the datasets and tokenizers by default — you download them the first time.
+
+<---------Summary of common modules in NLTK:----------->
+Task	NLTK Module
+Tokenization	nltk.tokenize
+Stopwords	nltk.corpus.stopwords
+Stemming	nltk.stem.PorterStemmer
+Lemmatization	nltk.stem.WordNetLemmatizer
+POS Tagging	nltk.pos_tag
+Named Entity Recognition	nltk.ne_chunk
+
+refrences -ChatGPT
+
+
+TF IDF vectorizer(term frequency)
+
+
+What is pickle?
+pickle is a Python module that lets you save (serialize) any Python object into a file (or bytes) — and then load (deserialize) it later.
+
+It's like saving your variables, models, data, etc., and then restoring them without recalculating.
+
+Commonly used for saving machine learning models, caching data, saving program states, etc.
+
+

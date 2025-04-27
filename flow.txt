@@ -1,0 +1,1 @@
+Tokenization(beautiful,beauty,beauti->into single token)->stemming -> vectorization -> calculate distance(gap) (theta) for similarity (cosine similarity) theta 0=same song,theta=5 similar song,and so on ->content based, collaborative based, population based, hybrid based(content&rating)
