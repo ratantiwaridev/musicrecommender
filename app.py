@@ -3,8 +3,8 @@ import streamlit as st
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
-CLIENT_ID = "99bc4acb638a4f23943e1c0d8a477e76"
-CLIENT_SECRET = "5df8e11c0e6a4d45ac8e327d158d705b"
+CLIENT_ID = "enter_client_id"
+CLIENT_SECRET = "Enter_client_secret"
 
 # Initialize the Spotify client
 client_credentials_manager = SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
