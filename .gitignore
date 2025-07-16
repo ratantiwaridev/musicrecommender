@@ -1,0 +1,23 @@
+# Ignore pickle files
+*.pkl
+df
+similarity
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Jupyter checkpoint files
+.ipynb_checkpoints/
+
+# Ignore archives
+*.zip
+
+# Ignore virtual environment (if created)
+venv/
+.env/
+
+# Ignore text files
+text files
+.cache
+*.csv
